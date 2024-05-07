@@ -1,20 +1,54 @@
-// Lab 1 Bit Manip.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+#include <bitset>
+
+unsigned int bitField = 17; //Global variable
+void Turnon(int& bit); //decleration
+
+void Print(const unsigned int _x); //decleration
 
 int main()
 {
-    std::cout << "Hello World!\n";
+
+
+    // NOT (~)
+    //int z = 167;
+    //Print(z);
+    //z = ~z;
+    //Print(z);
+    //int a = UINT_MAX;
+    //Print(a);
+    //a = ~a;
+    //Print(a);
+
+    // AND (&)
+    //int f = 187;
+    //Print(f);
+    //int g = 243;
+    //Print(g);
+    //int h = f & g;
+    //Print(h);
+
+    // OR (|)
+    //int f = 187;
+    //Print(f);
+    //int g = 243;
+    //Print(g);
+    //int h = f | g;
+    //Print(h);
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+void Print(const unsigned int _x) //definition
+{
+    std::cout << "DEC: " << _x << "\t";
+    std::cout << std::hex << "HEX: " << _x << std::dec << "\t";
+    std::cout << "BIN: " << std::bitset<32>(_x) << "\n";
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void Turnon(int& bit)
+{
+    // bitfield 0001 0011 - current value
+    // user passed in 3 as bit to turn on
+    // figure out what operator to use and what value
+    // --------------------
+    // bitfield 0001 1011
+}
