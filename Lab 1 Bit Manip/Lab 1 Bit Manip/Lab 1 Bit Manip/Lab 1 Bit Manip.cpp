@@ -1,5 +1,7 @@
 #include <iostream>
 #include <bitset>
+#include "../../../Misc/Input/Input.h"
+#include "../../../Misc/Console/Console.h"
 
 unsigned int bitField = 17; //Global variable
 void Turnon(int& bit); //decleration
@@ -8,7 +10,46 @@ void Print(const unsigned int _x); //decleration
 
 int main()
 {
-    Print(bitField);
+    int menuselection = 0;
+    std::vector<std::string> menuOptions{ "1. Turn On", "2. Turn Off", "3. Toggle", "4. Negate", "5. Left Shift", "6. Right Shift", "7. Exit"};
+
+    do
+    {
+        Print(bitField);
+        menuselection = Input::GetMenuSelection(menuOptions);
+        Console::Clear();
+
+        switch (menuselection)
+        {
+        case 1: // Turn on
+        {
+
+        }
+        case 2: // Turn off
+        {
+
+        }
+        case 3: // Toggle
+        {
+
+        }
+        case 4: // Negate
+        {
+
+        }
+        case 5: // Left Shift
+        {
+
+        }
+        case 6: // Right Shift
+        {
+
+        }
+        default:
+            break;
+        }
+
+    } while (menuselection != menuOptions.size());
 
 }
 
