@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Misc\Console\Console.cpp" />
+    <ClCompile Include="..\..\..\Misc\Input\Input.cpp" />
     <ClCompile Include="Lab 1 Bit Manip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Misc\Console\Console.h" />
+    <ClInclude Include="..\..\..\Misc\Input\Input.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
