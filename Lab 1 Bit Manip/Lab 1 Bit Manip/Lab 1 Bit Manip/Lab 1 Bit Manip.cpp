@@ -4,7 +4,7 @@
 #include "../../../Misc/Console/Console.h"
 
 
-unsigned int bitField = 777; //Global variable
+unsigned int bitField; //Global variable
 void Turnon(int bit); //decleration
 void TurnOff(int bit);
 void Toggle(int bit);
@@ -16,13 +16,14 @@ void Print(const unsigned int _x); //decleration
 
 int main()
 {
+    srand((unsigned int)time(NULL));
+    bitField = rand() % RAND_MAX;
     int menuselection = 0;
     std::vector<std::string> menuOptions{ "1. Turn On", "2. Turn Off", "3. Toggle", "4. Negate", "5. Left Shift", "6. Right Shift", "7. Exit"};
     Print(bitField);
 
     do
     {
-
         menuselection = Input::GetMenuSelection(menuOptions);
         Console::Clear();
 
@@ -69,29 +70,25 @@ int main()
 void Print(const unsigned int _x) //definition
 {
     std::cout << "BITFIELD: " << _x << "\t";
-    std::cout << std::hex << "HEX: " << _x << std::dec << "\t";
-    std::cout << "BIN: " << std::bitset<32>(_x) << "\n";
+    std::cout << "BIN: ";
+    for (int i = 31; i >= 0; i--)
+    {
+        std::cout << ((_x >> i) & 1);
+        if (i % 4 == 0)
+            std::cout << " ";
+    }
+    std::cout << "\n";
 }
 
 void Turnon(int bit)
 {
-    // bitfield 0001 0011 - current value
-    // user passed in 3 as bit to turn on
-    // figure out what operator to use and what value
     bitField = bitField | 1 << bit;
-    // --------------------
-    // bitfield 0001 1011
     Print(bitField);
 }
 
 void TurnOff(int bit)
 {
-    // bitfield 0001 0011 - current value
-    // user passed in X as bit to turn off
-    // figure out what operator to use and what value
     bitField = bitField & ~(1 << bit);
-    // --------------------
-    // bitfield 
     Print(bitField);
 }
 
