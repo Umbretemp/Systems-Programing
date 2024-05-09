@@ -2,7 +2,7 @@
 #include "../../Misc/Input/Input.h"
 #include "../../Misc/Console/Console.h"
 #include "Passby.h"
-#include "Struct.h"
+#include "Car.h"
 
 
 int main()
