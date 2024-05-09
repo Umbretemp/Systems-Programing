@@ -47,7 +47,7 @@
     <ClInclude Include="Passby.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Struct.h">
+    <ClInclude Include="Car.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
