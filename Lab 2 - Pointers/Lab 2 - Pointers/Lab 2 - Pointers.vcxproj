@@ -131,12 +131,14 @@
     <ClCompile Include="..\..\Misc\Input\Input.cpp" />
     <ClCompile Include="Lab 2 - Pointers.cpp" />
     <ClCompile Include="Passby.cpp" />
+    <ClCompile Include="Programs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Misc\Console\Console.h" />
     <ClInclude Include="..\..\Misc\Input\Input.h" />
     <ClInclude Include="Car.h" />
     <ClInclude Include="Passby.h" />
+    <ClInclude Include="Programs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
