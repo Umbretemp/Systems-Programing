@@ -35,42 +35,42 @@ void Console::Write(std::string message)
 	std::cout << message;
 }
 
-void Console::Write(std::string message, ConsoleColor foreColor, ConsoleColor backColor)
-{
-	SetForegroundColor(foreColor);
-	SetBackgroundColor(backColor);
-	std::cout << message;
-	Reset();
-}
+//void Console::Write(std::string message, ConsoleColor foreColor, ConsoleColor backColor)
+//{
+//	SetForegroundColor(foreColor);
+//	SetBackgroundColor(backColor);
+//	std::cout << message;
+//	Reset();
+//}
 
 void Console::WriteLine(std::string message)
 {
 	std::cout << message << std::endl;
 }
 
-void Console::WriteLine(std::string message, ConsoleColor foreColor, ConsoleColor backColor)
-{
-	SetForegroundColor(foreColor);
-	SetBackgroundColor(backColor);
-	std::cout << message;
-	Reset();
-	std::cout << std::endl;
-}
+//void Console::WriteLine(std::string message, ConsoleColor foreColor, ConsoleColor backColor)
+//{
+//	SetForegroundColor(foreColor);
+//	SetBackgroundColor(backColor);
+//	std::cout << message;
+//	Reset();
+//	std::cout << std::endl;
+//}
 
-void Console::SetForegroundColor(ConsoleColor foreColor)
-{
-	std::cout << ESC << "[" << foreColor + 30 << "m";
-}
+//void Console::SetForegroundColor(ConsoleColor foreColor)
+//{
+//	std::cout << ESC << "[" << foreColor + 30 << "m";
+//}
 
 void Console::SetForegroundColor(int r, int g, int b)
 {
 	std::cout << ESC << "[38;2;" << r << ";" << g << ";" << b << "m";
 }
 
-void Console::SetBackgroundColor(ConsoleColor backColor)
-{
-	std::cout << ESC << "[" << backColor + 40 << "m";
-}
+//void Console::SetBackgroundColor(ConsoleColor backColor)
+//{
+//	std::cout << ESC << "[" << backColor + 40 << "m";
+//}
 
 void Console::SetBackgroundColor(int r, int g, int b)
 {

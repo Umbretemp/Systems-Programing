@@ -1,8 +1,21 @@
 #pragma once
 
+enum EnumColorDefinition
+{
+	Red,
+	Blue,
+	Green,
+	Yellow,
+	Black,
+	White,
+	Silver,
+	Gray,
+};
+
+
 struct Car
 {
-	
+
 	//Make - char array of size 32
 	//Model – char array of size 32
 	//Year – int
@@ -11,6 +24,6 @@ struct Car
 	char Make_[32];
 	char Model_[32];
 	int Year_;
-	int Milage_;
-	int Color_; // EnumColorDefinition
+	int Milage_; 
+	EnumColorDefinition Color;
 };
