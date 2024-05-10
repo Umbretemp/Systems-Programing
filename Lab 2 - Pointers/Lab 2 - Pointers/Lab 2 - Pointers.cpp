@@ -10,12 +10,7 @@ int main()
 {
     //std::cout << "Hello World!\n";
 
-    //Programs::Program1();
-
-    //int P2 = rand();
-    //int* Ptr2 = &P2;
-    //Programs::Program2(P2, Ptr2);
-    
+    Programs::Program1();   
     
     
     int Arrayfield[15];
