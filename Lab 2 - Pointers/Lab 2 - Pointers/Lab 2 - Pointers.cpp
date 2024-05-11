@@ -8,13 +8,10 @@
 
 int main()
 {
-    std::string Color;
     std::vector<std::string> colorOptions{"0. Black" , "1. Red", "2. Blue", "3. Green", "4. Yellow", "5. White", "6. Silver", "7. Gray" };
-
 
     std::cout << "PROGRAM 1:\n";
     Programs::Program1();   
-    
 
     std::cout << "\nPROGRAM 2:\n";
     int Arrayfield[15];
@@ -35,4 +32,9 @@ int main()
     std::cout << "Please choose which color you would like to repaint your vehicle\n";
     Programs::repaintCar(Carptr, (EnumColorDefinition)Input::GetMenuSelection(colorOptions));
 
+
+    Console::WriteLine("\nPRINT CAR:");
+    Programs::printCar(CarArray[1]);
+    Console::WriteLine("\nPRINT CARPTR:");
+    Programs::printCarPointer(Carptr);
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include "Car.h"
+
 class Programs
 {
 public:
@@ -9,7 +10,8 @@ public:
 
 	static void repaintCar(Car* ptrCar, EnumColorDefinition newcolor);
 	
-	
+	static void printCar(Car c);
+	static void printCarPointer(Car* ptrCar);
 private:
 };
 

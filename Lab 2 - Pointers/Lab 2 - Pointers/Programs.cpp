@@ -33,7 +33,7 @@ void Programs::Program3(Car carArray[3])
 		do
 		{
 			std::cin.getline(carArray[i].Make_, 32);
-		} while (carArray[i].Make_[0] == '\0'); //Kept auto inputing blank or space
+		} while (carArray[i].Make_[0] == '\0'); // Kept auto inputing blank or space
 
 		std::cout << "Please enter the model of Car " << i + 1 << ": ";
 		std::cin.getline(carArray[i].Model_, 32);
@@ -67,38 +67,19 @@ void Programs::Program3(Car carArray[3])
 		
 	}
 
-	for (auto i = 0; i < 3; i++)
-	{
-		std::cout << "Car " << i + 1 << " is a " << carArray[i].Year_ << " " << carArray[i].Make_ << " " << carArray[i].Model_;
-		std::cout << " with " << carArray[i].Milage_;
-		switch (carArray[i].Color) {
-		case Red:
-			std::cout << " and is red.";
-			break;
-		case Blue:
-			std::cout << " and is blue.";
-			break;
-		case Green:
-			std::cout << " and is green.";
-			break;
-		case Yellow:
-			std::cout << " and is yellow.";
-			break;
-		case White:
-			std::cout << " and is white.";
-			break;
-		case Silver:
-			std::cout << " and is silver.";
-			break;
-		case Gray:
-			std::cout << " and is gray.";
-			break;
-		default:
-			std::cout << " and is black.";
-			break;
-		}
-		std::cout << "\n";
-	}
+	Console::WriteLine("\nPRINT CAR:");
+	printCar(carArray[0]);
+	printCar(carArray[1]);
+	printCar(carArray[2]);
+
+	Car* Car1 = &carArray[0];
+	Car* Car2 = &carArray[1];
+	Car* Car3 = &carArray[2];
+
+	Console::WriteLine("\nPRINT CARPTR:");
+	printCarPointer(Car1);
+	printCarPointer(Car2);
+	printCarPointer(Car3);
 }
 
 void Programs::repaintCar(Car* ptrCar, EnumColorDefinition newcolor)
@@ -158,6 +139,73 @@ void Programs::repaintCar(Car* ptrCar, EnumColorDefinition newcolor)
 		std::cout << "\nYour Car has been repainted to black.";
 		break;
 	}
+	std::cout << "\n";
+}
+
+void Programs::printCar(Car Car)
+{
+	std::cout << "You Car is a " << Car.Year_ << " " << Car.Make_ << " " << Car.Model_;
+	std::cout << " with " << Car.Milage_ << " miles";
+	switch (Car.Color) {
+	case Red:
+		std::cout << " and is red.";
+		break;
+	case Blue:
+		std::cout << " and is blue.";
+		break;
+	case Green:
+		std::cout << " and is green.";
+		break;
+	case Yellow:
+		std::cout << " and is yellow.";
+		break;
+	case White:
+		std::cout << " and is white.";
+		break;
+	case Silver:
+		std::cout << " and is silver.";
+		break;
+	case Gray:
+		std::cout << " and is gray.";
+		break;
+	default:
+		std::cout << " and is black.";
+		break;
+	}
+	std::cout << "\n";
+}
+
+void Programs::printCarPointer(Car* ptrCar)
+{
+	std::cout << "You Car is a " << (*ptrCar).Year_ << " " << (*ptrCar).Make_ << " " << (*ptrCar).Model_;
+	std::cout << " with " << (*ptrCar).Milage_ << " miles";
+	switch ((*ptrCar).Color) {
+	case Red:
+		std::cout << " and is red.";
+		break;
+	case Blue:
+		std::cout << " and is blue.";
+		break;
+	case Green:
+		std::cout << " and is green.";
+		break;
+	case Yellow:
+		std::cout << " and is yellow.";
+		break;
+	case White:
+		std::cout << " and is white.";
+		break;
+	case Silver:
+		std::cout << " and is silver.";
+		break;
+	case Gray:
+		std::cout << " and is gray.";
+		break;
+	default:
+		std::cout << " and is black.";
+		break;
+	}
+	std::cout << "\n";
 }
 
 
