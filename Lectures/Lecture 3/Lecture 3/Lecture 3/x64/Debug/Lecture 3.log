@@ -1,0 +1,5 @@
+﻿  Lecture 3.cpp
+C:\Users\Admin\source\repos\Systems-Programing\Lectures\Lecture 3\Lecture 3\Lecture 3.cpp(28,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lectures\Lecture 3\Lecture 3\Lecture 3.cpp(10,1): warning C4172: returning address of local variable or temporary: y
+C:\Users\Admin\source\repos\Systems-Programing\Lectures\Lecture 3\Lecture 3\Lecture 3.cpp(15,1): warning C4172: returning address of local variable or temporary: y
+  Lecture 3.vcxproj -> C:\Users\Admin\source\repos\Systems-Programing\Lectures\Lecture 3\Lecture 3\x64\Debug\Lecture 3.exe
