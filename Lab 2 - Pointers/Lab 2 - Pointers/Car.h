@@ -6,10 +6,10 @@ enum EnumColorDefinition
 	Blue,
 	Green,
 	Yellow,
-	Black,
 	White,
 	Silver,
 	Gray,
+	Black,
 };
 
 

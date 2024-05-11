@@ -8,11 +8,12 @@
 
 int main()
 {
-    //std::cout << "Hello World!\n";
-
+    std::cout << "PROGRAM 1:\n";
+    
     Programs::Program1();   
     
-    
+
+    std::cout << "\nPROGRAM 2:\n";
     int Arrayfield[15];
     for (auto i = 0; i < 15; i++)
     {
@@ -21,7 +22,8 @@ int main()
         Programs::Program2(Arrayfield[i], ArrayfieldPTR);
     }
     
+    std::cout << "\nPROGRAM 3:\n";
+    Programs::Program3();
 
-	
- 
+    
 }
