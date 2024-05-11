@@ -16,7 +16,7 @@ int Input::GetMenuSelection(std::vector<std::string> menuOptions, std::string me
 	{
 		std::cout << option << std::endl;
 	}
-	return GetInteger(message, 1, (int)menuOptions.size());
+	return GetInteger(message, 0, (int)menuOptions.size());
 
 }
 

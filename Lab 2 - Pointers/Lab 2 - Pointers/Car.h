@@ -2,6 +2,7 @@
 
 enum EnumColorDefinition
 {
+	Black,
 	Red,
 	Blue,
 	Green,
@@ -9,7 +10,6 @@ enum EnumColorDefinition
 	White,
 	Silver,
 	Gray,
-	Black,
 };
 
 

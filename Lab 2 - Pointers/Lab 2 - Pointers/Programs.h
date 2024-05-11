@@ -7,7 +7,7 @@ public:
 	static void Program2(int x, int* xptr);
 	static void Program3(Car carArray[3]);
 
-	void repaintCar(Car* ptrCar, EnumColorDefinition newcolor);
+	static void repaintCar(Car* ptrCar, EnumColorDefinition newcolor);
 	
 	
 private:
