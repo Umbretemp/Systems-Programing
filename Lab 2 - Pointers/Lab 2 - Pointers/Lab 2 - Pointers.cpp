@@ -23,7 +23,8 @@ int main()
     }
     
     std::cout << "\nPROGRAM 3:\n";
-    Programs::Program3();
+    Car CarArray[3];
+    Programs::Program3(CarArray);
 
     
 }
