@@ -12,6 +12,7 @@ public:
 	
 	static void printCar(Car c);
 	static void printCarPointer(Car* ptrCar);
+	static void addMileage(Car* ptrCar, int milestoadd);
 private:
 };
 

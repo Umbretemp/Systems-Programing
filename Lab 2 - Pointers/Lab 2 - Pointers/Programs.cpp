@@ -10,7 +10,7 @@ void Programs::Program1()
 	for (auto i = 0; i < 15; i++)
 	{
 		Array[i] = rand();
-		std::cout << "Value" << i+1 << ": " << Array[i] << "\tMEM: " << &Array[i] << "\n";
+		std::cout << "Value " << i+1 << ": " << Array[i] << "\tMEM: " << &Array[i] << "\n";
 	}
 }
 
@@ -65,7 +65,7 @@ void Programs::Program3(Car carArray[3])
 		}
 		carArray[i].Color = (EnumColorDefinition)colorInput;
 		
-	}
+	}	
 
 	Console::WriteLine("\nPRINT CAR:");
 	printCar(carArray[0]);
@@ -206,6 +206,11 @@ void Programs::printCarPointer(Car* ptrCar)
 		break;
 	}
 	std::cout << "\n";
+}
+
+void Programs::addMileage(Car* ptrCar, int miles2add)
+{
+	(*ptrCar).Milage_ = (*ptrCar).Milage_ + miles2add;
 }
 
 

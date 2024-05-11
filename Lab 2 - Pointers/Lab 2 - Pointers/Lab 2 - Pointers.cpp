@@ -33,8 +33,13 @@ int main()
     Programs::repaintCar(Carptr, (EnumColorDefinition)Input::GetMenuSelection(colorOptions));
 
 
-    Console::WriteLine("\nPRINT CAR:");
+    Console::WriteLine("\nPRINT CAR2:");
     Programs::printCar(CarArray[1]);
     Console::WriteLine("\nPRINT CARPTR:");
     Programs::printCarPointer(Carptr);
+
+    Console::WriteLine("\nMILEAGE ADD:");
+    Programs::addMileage(Carptr, Input::GetInteger("Please enter how many miles you would like to add to the odomiter: ", 0, INT_MAX));
+    Programs::printCarPointer(Carptr);
+
 }
