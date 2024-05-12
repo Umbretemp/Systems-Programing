@@ -67,7 +67,7 @@ void Programs::Program3(Car carArray[3])
 		
 	}	
 
-	Console::WriteLine("\nPRINT CAR:");
+	Console::WriteLine("\nPRINT CARs:");
 	printCar(carArray[0]);
 	printCar(carArray[1]);
 	printCar(carArray[2]);
@@ -76,7 +76,7 @@ void Programs::Program3(Car carArray[3])
 	Car* Car2 = &carArray[1];
 	Car* Car3 = &carArray[2];
 
-	Console::WriteLine("\nPRINT CARPTR:");
+	Console::WriteLine("\nPRINT CARPTRs:");
 	printCarPointer(Car1);
 	printCarPointer(Car2);
 	printCarPointer(Car3);
@@ -144,7 +144,7 @@ void Programs::repaintCar(Car* ptrCar, EnumColorDefinition newcolor)
 
 void Programs::printCar(Car Car)
 {
-	std::cout << "You Car is a " << Car.Year_ << " " << Car.Make_ << " " << Car.Model_;
+	std::cout << "Your Car is a " << Car.Year_ << " " << Car.Make_ << " " << Car.Model_;
 	std::cout << " with " << Car.Milage_ << " miles";
 	switch (Car.Color) {
 	case Red:
@@ -177,7 +177,7 @@ void Programs::printCar(Car Car)
 
 void Programs::printCarPointer(Car* ptrCar)
 {
-	std::cout << "You Car is a " << (*ptrCar).Year_ << " " << (*ptrCar).Make_ << " " << (*ptrCar).Model_;
+	std::cout << "Your Car is a " << (*ptrCar).Year_ << " " << (*ptrCar).Make_ << " " << (*ptrCar).Model_;
 	std::cout << " with " << (*ptrCar).Milage_ << " miles";
 	switch ((*ptrCar).Color) {
 	case Red:

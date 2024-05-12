@@ -27,18 +27,103 @@ int main()
     Programs::Program3(CarArray);
 
     Car* Carptr = &CarArray[0];
+    int Carnum;
 
-    Console::WriteLine("\nREPAINT CAR:");
+    Console::WriteLine("\nREPAINT CAR:");    
+    Carnum = Input::GetInteger("Which Car would you like to paint?", 1, 3);
+    switch (Carnum)
+    {
+    case 1: // Car 1
+    {
+        Carptr = &CarArray[0];
+        break;
+    }
+    case 2: // Car 2
+    {
+        Carptr = &CarArray[1];
+        break;
+    }
+    case 3: // Car 3
+    {
+        Carptr = &CarArray[2];
+        break;
+    }
+    default:
+        break;
+    }
     std::cout << "Please choose which color you would like to repaint your vehicle\n";
     Programs::repaintCar(Carptr, (EnumColorDefinition)Input::GetMenuSelection(colorOptions));
 
+    Console::WriteLine("\nPRINT CAR:");
+    Carnum = Input::GetInteger("Which Car would you like to print?", 1, 3);
+    switch (Carnum)
+    {
+    case 1: // Car 1
+    {
+        Carptr = &CarArray[0];
+        break;
+    }
+    case 2: // Car 2
+    {
+        Carptr = &CarArray[1];
+        break;
+    }
+    case 3: // Car 3
+    {
+        Carptr = &CarArray[2];
+        break;
+    }
+    default:
+        std::cout << "Please choose 1, 2, or 3.";
+    }
+    Programs::printCar((*Carptr));
 
-    Console::WriteLine("\nPRINT CAR2:");
-    Programs::printCar(CarArray[1]);
     Console::WriteLine("\nPRINT CARPTR:");
+    Carnum = Input::GetInteger("Which Car would you like to print?", 1, 3);
+    switch (Carnum)
+    {
+    case 1: // Car 1
+    {
+        Carptr = &CarArray[0];
+        break;
+    }
+    case 2: // Car 2
+    {
+        Carptr = &CarArray[1];
+        break;
+    }
+    case 3: // Car 3
+    {
+        Carptr = &CarArray[2];
+        break;
+    }
+    default:
+        std::cout << "Please choose 1, 2, or 3.";
+    }
     Programs::printCarPointer(Carptr);
 
     Console::WriteLine("\nMILEAGE ADD:");
+    Carnum = Input::GetInteger("Which Car would you like to change the milage of?", 1, 3);
+    switch (Carnum)
+    {
+    case 1: // Car 1
+    {
+        Carptr = &CarArray[0];
+        break;
+    }
+    case 2: // Car 2
+    {
+        Carptr = &CarArray[1];
+        break;
+    }
+    case 3: // Car 3
+    {
+        Carptr = &CarArray[2];
+        break;
+    }
+    default:
+        std::cout << "Please choose 1, 2, or 3.";
+    }
     Programs::addMileage(Carptr, Input::GetInteger("Please enter how many miles you would like to add to the odomiter: ", 0, INT_MAX));
     Programs::printCarPointer(Carptr);
 
