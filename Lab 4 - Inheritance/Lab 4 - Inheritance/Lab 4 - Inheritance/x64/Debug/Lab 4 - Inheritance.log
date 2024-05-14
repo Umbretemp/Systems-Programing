@@ -1,9 +1,6 @@
-﻿  BaseAccount.cpp
-  CheckingAccount.cpp
-  Console.cpp
+﻿  CheckingAccount.cpp
   CreditAccount.cpp
-C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\CreditAccount.cpp(6,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-  Input.cpp
+C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\CreditAccount.cpp(5,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
   Lab 4 - Inheritance.cpp
   SavingsAccount.cpp
   Generating Code...

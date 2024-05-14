@@ -3,7 +3,7 @@
 class CheckingAccount : public BaseAccount
 {
 public:
-	CheckingAccount(float accountBalance_, int withdrawals_) 
+	CheckingAccount(float accountBalance_, int withdrawals_ = 0) 
 		: BaseAccount(accountBalance_, withdrawals_)
 	{
 

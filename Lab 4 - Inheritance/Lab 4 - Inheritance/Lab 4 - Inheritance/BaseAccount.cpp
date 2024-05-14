@@ -8,6 +8,7 @@ void BaseAccount::Withdraw(float amount)
 {
 	accountBalance_ -= amount;
 	withdrawals_++;
+	std::cout << "\n$" << amount << " was taken out of your ";
 }
 
 /// <summary>

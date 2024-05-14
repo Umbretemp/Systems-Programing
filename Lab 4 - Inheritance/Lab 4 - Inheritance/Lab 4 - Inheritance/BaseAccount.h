@@ -1,9 +1,10 @@
 #pragma once
+#include <iostream>
 class BaseAccount
 {
 public:
 	// ctor
-	BaseAccount(float accountBalance_, int withdrawals_) : 
+	BaseAccount(float accountBalance_, int withdrawals_ = 0) : 
 		accountBalance_(accountBalance_)
 		, withdrawals_(withdrawals_)
 	{
