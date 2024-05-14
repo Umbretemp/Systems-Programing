@@ -6,7 +6,7 @@
 /// <param name="amount"></param>
 void BaseAccount::Withdraw(float amount)
 {
-	accountBalance_ - amount;
+	accountBalance_ -= amount;
 	withdrawals_++;
 }
 
@@ -16,7 +16,7 @@ void BaseAccount::Withdraw(float amount)
 /// <param name="amount"></param>
 void BaseAccount::Deposit(float amount)
 {
-	accountBalance_ + amount;
+	accountBalance_ += amount;
 }
 
 

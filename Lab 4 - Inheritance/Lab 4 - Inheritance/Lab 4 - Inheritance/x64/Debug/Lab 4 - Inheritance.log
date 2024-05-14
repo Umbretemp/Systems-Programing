@@ -1,6 +1,1 @@
-﻿  BaseAccount.cpp
-C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\BaseAccount.cpp(9,18): warning C4552: '-': result of expression not used
-C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\BaseAccount.cpp(19,18): warning C4552: '+': result of expression not used
-  Lab 4 - Inheritance.cpp
-  Generating Code...
-  Lab 4 - Inheritance.vcxproj -> C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\x64\Debug\Lab 4 - Inheritance.exe
+﻿  Lab 4 - Inheritance.vcxproj -> C:\Users\jakec\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\x64\Debug\Lab 4 - Inheritance.exe
