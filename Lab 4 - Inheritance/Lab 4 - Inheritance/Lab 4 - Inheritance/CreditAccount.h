@@ -3,8 +3,9 @@
 class CreditAccount : public BaseAccount
 {
 public:
-	CreditAccount(float accountBalance_, int withdrawals_)
+	CreditAccount(float accountBalance_, int withdrawals_, int ammountSpent = 0)
 		: BaseAccount(accountBalance_, withdrawals_)
+		,ammountSpent_(ammountSpent)
 	{
 
 	}
@@ -12,6 +13,6 @@ public:
 	void Withdraw(float amount) override;
 
 private:
-	int ammountSpent_;
+	int ammountSpent_ = 0;
 };
 
