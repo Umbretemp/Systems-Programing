@@ -4,36 +4,48 @@
 namespace Helper
 {
 	int GetValidatedInt(const char* strMessage, int nMinimumRange = 0, int nMaximumRange = 0);
+	void PrintBinary(const unsigned int _x);
+	void ClearInputBuffer();
 
-	int Helper::GetValidatedInt(const char* strMessage, int nMinimumRange, int nMaximumRange)
+	int GetValidatedInt(const char* strMessage, int nMinimumRange, int nMaximumRange)
 	{
 		int Input;
-		bool inRange = false;
 		std::cout << strMessage << "\n";		
 		
 		if (nMaximumRange == 0 && nMinimumRange == 0) // Prefer (min == max) instead of both = 0
-			return 0;
-
-		
+			return 0;		
 
 		do
 		{
-			std::cin >> Input;
-			if (std::cin.fail()) // entered non integer
+			if (std::cin >> Input && Input <= nMaximumRange && Input >= nMinimumRange) // entered non integer
 			{
-				std::cin.clear(); // clears any errors in cin
-				std::cin.ignore(INT_MAX, '\n'); // flush INT_MAX chars until it sees '\n'
+				ClearInputBuffer();
+				break;
 			}
-			else
-				std::cin.clear();// the buffer still needs to be cleared even if this step was successful
+			ClearInputBuffer();
+			std::cout << "Please enter a value between " << nMinimumRange << " and " << nMaximumRange << "\n";
 
-			if (Input <= nMaximumRange && Input >= nMinimumRange)
-				inRange = true;
-			else			
-				std::cout << "Please enter a value between " << nMinimumRange << " and " << nMaximumRange << "\n";
-
-		}	while (!inRange);
+		}	while (true);
 
 		return Input;
+	}
+
+	void PrintBinary(const unsigned int _x)
+	{
+		std::cout << "Initial value: " << _x << "\t";
+		std::cout << "Binary value: ";
+		for (int i = 31; i >= 0; i--)
+		{
+			std::cout << ((_x >> i) & 1);
+			if (i % 4 == 0)
+				std::cout << " ";
+		}
+		std::cout << "\n";
+	}
+
+	void ClearInputBuffer()
+	{
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
 	}
 }

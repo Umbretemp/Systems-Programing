@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Helper.cpp" />
     <ClCompile Include="Lab 3 - Helper Library.cpp" />
   </ItemGroup>
   <ItemGroup>
