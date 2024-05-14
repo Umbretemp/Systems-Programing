@@ -18,6 +18,7 @@ void BaseAccount::Withdraw(float amount)
 void BaseAccount::Deposit(float amount)
 {
 	accountBalance_ += amount;
+	std::cout << "\n$" << amount << " was taken out of your account";
 }
 
 
