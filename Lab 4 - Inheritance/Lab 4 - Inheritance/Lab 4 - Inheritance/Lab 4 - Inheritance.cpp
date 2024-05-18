@@ -37,7 +37,7 @@ int main()
 			{
 				Console::Clear();
 				std::cout << "Checking Account: \n";
-				menuSelection = Input::GetMenuSelection(accountMenu);
+				accountSelection = Input::GetMenuSelection(accountMenu);
 				Console::Clear();
 
 				switch (accountSelection)
@@ -67,7 +67,7 @@ int main()
 			{
 				Console::Clear();
 				std::cout << "Savings Account: \n";
-				menuSelection = Input::GetMenuSelection(accountMenu);
+				accountSelection = Input::GetMenuSelection(accountMenu);
 				Console::Clear();
 
 				switch (accountSelection)
@@ -97,7 +97,7 @@ int main()
 			{
 				Console::Clear();
 				std::cout << "Credit Account: \n";
-				menuSelection = Input::GetMenuSelection(accountMenu);
+				accountSelection = Input::GetMenuSelection(accountMenu);
 				Console::Clear();
 
 				switch (accountSelection)
@@ -116,7 +116,8 @@ int main()
 				}
 				default:
 					break;
-				}
+				}					
+				
 			} while (accountSelection != accountMenu.size());
 
 			break;
@@ -124,8 +125,6 @@ int main()
 		default:
 			break;
 		}
-
-		Input::PressEnter(true);
 
 	} while (menuSelection != bankMenu.size());
 
