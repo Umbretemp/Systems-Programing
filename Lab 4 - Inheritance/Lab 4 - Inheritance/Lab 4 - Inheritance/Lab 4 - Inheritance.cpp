@@ -32,23 +32,27 @@ int main()
 		switch (menuSelection)
 		{
 		case 1: // Checking
-		{
-			Console::Clear();
-			menuSelection = Input::GetMenuSelection(accountMenu);
-			Console::Clear();
-
+		{			
 			do
 			{
+				Console::Clear();
+				std::cout << "Checking Account: \n";
+				menuSelection = Input::GetMenuSelection(accountMenu);
+				Console::Clear();
+
 				switch (accountSelection)
 				{
 				case 1: // Deposit
 				{
+					break;
 				}
 				case 2: // Withdrawl
 				{
+					break;
 				}
 				case 3: // Balance
 				{
+					break;
 				}
 				default:
 					break;
@@ -59,22 +63,26 @@ int main()
 		}
 		case 2: // Savings
 		{
-			Console::Clear();
-			menuSelection = Input::GetMenuSelection(accountMenu);
-			Console::Clear();
-
 			do
 			{
+				Console::Clear();
+				std::cout << "Savings Account: \n";
+				menuSelection = Input::GetMenuSelection(accountMenu);
+				Console::Clear();
+
 				switch (accountSelection)
 				{
 				case 1: // Deposit
 				{
+					break;
 				}
 				case 2: // Withdrawl
 				{
+					break;
 				}
 				case 3: // Balance
 				{
+					break;
 				}
 				default:
 					break;
@@ -85,22 +93,26 @@ int main()
 		}
 		case 3: // Credit
 		{
-			Console::Clear();
-			menuSelection = Input::GetMenuSelection(accountMenu);
-			Console::Clear();
-
 			do
 			{
+				Console::Clear();
+				std::cout << "Credit Account: \n";
+				menuSelection = Input::GetMenuSelection(accountMenu);
+				Console::Clear();
+
 				switch (accountSelection)
 				{
 				case 1: // Deposit
 				{
+					break;
 				}
 				case 2: // Withdrawl
 				{
+					break;
 				}
 				case 3: // Balance
 				{
+					break;
 				}
 				default:
 					break;
