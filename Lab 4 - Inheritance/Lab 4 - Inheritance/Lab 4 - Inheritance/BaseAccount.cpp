@@ -8,7 +8,7 @@ void BaseAccount::Withdraw(float amount)
 {
 	accountBalance_ -= amount;
 	withdrawals_++;
-	std::cout << "\n$" << amount << " was taken out of your ";
+	std::cout << "\n$" << amount << ".00 was taken out of your ";
 }
 
 /// <summary>
@@ -18,7 +18,7 @@ void BaseAccount::Withdraw(float amount)
 void BaseAccount::Deposit(float amount)
 {
 	accountBalance_ += amount;
-	std::cout << "\n$" << amount << " was deposited into your account";
+	std::cout << "\n$" << amount << ".00 was deposited into your account.\n";
 }
 
 

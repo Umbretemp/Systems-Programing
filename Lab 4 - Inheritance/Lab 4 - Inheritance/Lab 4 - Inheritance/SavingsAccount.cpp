@@ -8,5 +8,5 @@ void SavingsAccount::Withdraw(float amount)
 		std::cout << "Savings Account\n";
 	}
 	else
-		std::cout << "Too many withdawls from this account\n";
+		std::cout << "Too many withdawls from this account. You are only allowed THREE withdrawls from your Savings account.\n";
 }

@@ -27,8 +27,6 @@ int main()
 		menuSelection = Input::GetMenuSelection(bankMenu);
 		Console::Clear();
 
-		
-
 		switch (menuSelection)
 		{
 		case 1: // Checking
@@ -44,14 +42,22 @@ int main()
 				{
 				case 1: // Deposit
 				{
+					CheckingPTR->Deposit(Input::GetInteger("How much would you like to deposit? ", 1, INT_MAX));
+					std::cout << "You have $" << CheckingPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 2: // Withdrawl
 				{
+					CheckingPTR->Withdraw(Input::GetInteger("How much would you like to Withdrawl? ", 1, CheckingPTR->GetBalance()));
+					std::cout << "You have $" << CheckingPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 3: // Balance
 				{
+					std::cout << "You have $" << CheckingPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				default:
@@ -74,14 +80,22 @@ int main()
 				{
 				case 1: // Deposit
 				{
+					SavingsPTR->Deposit(Input::GetInteger("How much would you like to deposit? ", 1, INT_MAX));
+					std::cout << "You have $" << SavingsPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 2: // Withdrawl
 				{
+					SavingsPTR->Withdraw(Input::GetInteger("How much would you like to Withdrawl? ", 1, SavingsPTR->GetBalance()));
+					std::cout << "You have $" << SavingsPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 3: // Balance
 				{
+					std::cout << "You have $" << SavingsPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				default:
@@ -104,14 +118,22 @@ int main()
 				{
 				case 1: // Deposit
 				{
+					CreditPTR->Deposit(Input::GetInteger("How much would you like to deposit? ", 1, INT_MAX));
+					std::cout << "You have $" << CreditPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 2: // Withdrawl
 				{
+					CreditPTR->Withdraw(Input::GetInteger("How much would you like to Withdrawl? ", 1, (CreditPTR->GetBalance())-5000));
+					std::cout << "You have $" << CreditPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				case 3: // Balance
 				{
+					std::cout << "You have $" << CreditPTR->GetBalance() << ".00 in your Credit account.\n";
+					Input::PressEnter();
 					break;
 				}
 				default:
@@ -128,26 +150,5 @@ int main()
 
 	} while (menuSelection != bankMenu.size());
 
-	//CheckingAccount Test(5000, 0);
-	//SavingsAccount TESTER(5000, 0);
-	//CreditAccount TESTING(50000, 0);
-	//std::cout << "CHECKINGS\n";
-	//for (size_t i = 0; i < 12; i++)
-	//{
-	//	Test.Withdraw(5);
-	//	std::cout << Test.GetBalance() << "\n";
-	//}
-	//
-	//std::cout << "SAVINGS\n";
-	//for (size_t i = 0; i < 6; i++)
-	//{
-	//	TESTER.Withdraw(50);
-	//	std::cout << TESTER.GetBalance() << "\n";
-	//}
-	//	std::cout << "CREDIT\n";
-	//for (size_t i = 0; i < 6; i++)
-	//{
-	//	TESTING.Withdraw(10);
-	//	std::cout << TESTING.GetBalance() << "\n";
-	//}
+	
 }
