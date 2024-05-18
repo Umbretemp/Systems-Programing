@@ -150,5 +150,7 @@ int main()
 
 	} while (menuSelection != bankMenu.size());
 
-	
+	delete CheckingPTR;
+	delete SavingsPTR;
+	delete CreditPTR;
 }
