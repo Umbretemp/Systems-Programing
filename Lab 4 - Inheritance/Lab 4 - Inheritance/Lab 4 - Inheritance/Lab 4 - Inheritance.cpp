@@ -5,6 +5,7 @@
 #include "Input.h"
 #include "Console.h"
 #include <iostream>
+#include "BinaryFile.h"
 
 int main()
 {
@@ -149,6 +150,13 @@ int main()
 		}
 
 	} while (menuSelection != bankMenu.size());
+
+	std::vector<BaseAccount> Accounts;
+	Accounts.push_back(*CheckingPTR);
+	Accounts.push_back(*SavingsPTR);
+	Accounts.push_back(*CreditPTR);
+
+	BinaryFile::binaryWrite(Accounts);
 
 	delete CheckingPTR;
 	delete SavingsPTR;

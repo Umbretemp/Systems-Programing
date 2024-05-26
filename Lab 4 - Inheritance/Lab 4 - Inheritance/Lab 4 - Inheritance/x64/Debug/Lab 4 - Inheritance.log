@@ -6,15 +6,15 @@
 C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\CreditAccount.cpp(5,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
   Input.cpp
   Lab 4 - Inheritance.cpp
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(45,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(52,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(52,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(83,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(90,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(90,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(121,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(128,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(128,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(46,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(53,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(53,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(84,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(91,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(91,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(122,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(129,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(129,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   SavingsAccount.cpp
   Generating Code...
   Lab 4 - Inheritance.vcxproj -> C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\x64\Debug\Lab 4 - Inheritance.exe

@@ -6,8 +6,11 @@
 #include <vector>
 #include "BaseAccount.h"
 
-class BinaryFile : public BaseAccount
+class BinaryFile
 {
-	void binaryWrite(const std::vector<BaseAccount> Account);
+public:
+	static void binaryWrite(const std::vector<BaseAccount>& Account);
+
+private:
 };
 

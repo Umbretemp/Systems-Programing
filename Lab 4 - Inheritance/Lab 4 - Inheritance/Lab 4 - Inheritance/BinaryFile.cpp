@@ -1,6 +1,6 @@
 #include "BinaryFile.h"
 
-void BinaryFile::binaryWrite(const std::vector<BaseAccount> Account)
+void BinaryFile::binaryWrite(const std::vector<BaseAccount>& Account)
 {	
 	std::ofstream file;
 	file.open("Balance.bin", std::ios_base::out | std::ios_base::binary);
