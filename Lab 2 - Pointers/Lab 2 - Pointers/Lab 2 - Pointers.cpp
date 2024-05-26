@@ -8,6 +8,13 @@
 
 int main()
 {
+
+    int* number = new int(5);
+
+    std::cout << *number;
+
+    delete number;
+
     Input::GetInteger("test", 0, 55);
     std::vector<std::string> colorOptions{"0. Black" , "1. Red", "2. Blue", "3. Green", "4. Yellow", "5. White", "6. Silver", "7. Gray" };
 
