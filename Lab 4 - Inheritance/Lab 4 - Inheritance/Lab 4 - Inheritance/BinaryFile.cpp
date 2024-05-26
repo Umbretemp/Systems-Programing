@@ -44,3 +44,32 @@ void BinaryFile::binaryRead(std::vector<float>& Account)
 	}
 
 }
+
+void BinaryFile::binaryRead()
+{
+	std::vector<BaseAccount> Account;
+
+	std::ifstream file;
+	file.open("Balance.bin", std::ios_base::binary | std::ios_base::in);
+
+	if (file.is_open())
+	{
+		// Calculate size of file in bytes
+		file.seekg(0, std::ios_base::end);
+		int count = file.tellg(); // number of bytes
+		file.seekg(0, std::ios_base::beg);
+
+		// Divide number of bytes by size of vector = how many records
+		int numRecords = count / sizeof(Account); 
+
+		// Resize vector to have the number of records
+		Account.resize(numRecords);
+
+		// Read the values
+		file.read((char*)&Account[0], count);
+	}
+	else
+		std::cout << "Could not open file\n";
+
+	file.close();
+}

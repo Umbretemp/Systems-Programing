@@ -1,0 +1,55 @@
+﻿  BaseAccount.cpp
+  BinaryFile.cpp
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\BinaryFile.cpp(25,13): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82): error C2512: 'BaseAccount::BaseAccount': no appropriate default constructor available
+  (compiling source file 'BinaryFile.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82):
+  while trying to match the argument list '()'
+  C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xmemory(727,82):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\BinaryFile.cpp(9,23):
+  	see reference to class template instantiation 'std::vector<BaseAccount,std::allocator<BaseAccount>>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\vector(1588,23):
+  	while compiling class template member function 'void std::vector<BaseAccount,std::allocator<BaseAccount>>::resize(const unsigned __int64)'
+  		C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\BinaryFile.cpp(32,17):
+  		see the first reference to 'std::vector<BaseAccount,std::allocator<BaseAccount>>::resize' in 'BinaryFile::binaryRead'
+  	C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\vector(1590,9):
+  	see reference to function template instantiation 'void std::vector<BaseAccount,std::allocator<BaseAccount>>::_Resize<std::_Value_init_tag>(const unsigned __int64,const _Ty2 &)' being compiled
+          with
+          [
+              _Ty2=std::_Value_init_tag
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\vector(1578,27):
+  	see reference to function template instantiation 'BaseAccount *std::_Uninitialized_value_construct_n<std::allocator<BaseAccount>>(BaseAccount *,unsigned __int64,_Alloc &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<BaseAccount>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xmemory(2045,17):
+  	see reference to function template instantiation 'void std::_Uninitialized_backout_al<std::allocator<BaseAccount>>::_Emplace_back<>(void)' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.39.33519\include\xmemory(1805,35):
+  	see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,>(_Alloc &,_Objty *const )' being compiled
+          with
+          [
+              _Alloc=std::allocator<BaseAccount>,
+              _Ty=BaseAccount,
+              _Objty=BaseAccount
+          ]
+  
+  CheckingAccount.cpp
+  Console.cpp
+  CreditAccount.cpp
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\CreditAccount.cpp(5,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  Input.cpp
+  Lab 4 - Inheritance.cpp
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(46,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(53,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(53,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(84,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(91,112): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(91,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(122,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(129,114): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\Admin\source\repos\Systems-Programing\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance\Lab 4 - Inheritance.cpp(129,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  SavingsAccount.cpp
+  Generating Code...
