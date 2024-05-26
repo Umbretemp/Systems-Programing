@@ -1,4 +1,5 @@
 ﻿  BaseAccount.cpp
+  BinaryFile.cpp
   CheckingAccount.cpp
   Console.cpp
   CreditAccount.cpp
