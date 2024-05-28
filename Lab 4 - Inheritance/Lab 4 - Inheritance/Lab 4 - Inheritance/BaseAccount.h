@@ -4,7 +4,7 @@ class BaseAccount
 {
 public:
 	// ctor
-	BaseAccount(float accountBalance_, int withdrawals_ = 0) : 
+	BaseAccount(float accountBalance_ = 0, int withdrawals_ = 0) : 
 		accountBalance_(accountBalance_)
 		, withdrawals_(withdrawals_)
 	{

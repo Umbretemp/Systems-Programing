@@ -14,12 +14,18 @@ int main()
 	_CrtSetBreakAlloc(-1); // set block of memory to find memory leak
 	_CrtDumpMemoryLeaks();
 
-	BaseAccount* BasePTR = new BaseAccount(0);
+	std::vector<BaseAccount> Accounts;
+
+
+	BaseAccount* BasePTR = new BaseAccount();
 	CheckingAccount* CheckingPTR = new CheckingAccount(5000);
 	SavingsAccount* SavingsPTR = new SavingsAccount(2000);
 	CreditAccount* CreditPTR = new CreditAccount(50000);
+
+	BinaryFile::binaryRead(Accounts);
+
 	int menuSelection = 0;
-	std::vector<std::string> bankMenu{ "1. Checking Account", "2. Savings Account","3. Credit Account", "4. Exit" };
+	std::vector<std::string> bankMenu{ "1. Checking Account", "2. Savings Account", "3. Credit Account", "4. Exit" };
 	int accountSelection = 0;
 	std::vector<std::string> accountMenu{ "1. Deposit", "2. Withdrawl", "3. Check Balance", "4. Exit" };
 
@@ -152,7 +158,6 @@ int main()
 
 	} while (menuSelection != bankMenu.size());
 
-	std::vector<BaseAccount> Accounts;
 	Accounts.push_back(*BasePTR);
 	Accounts.push_back(*CheckingPTR);
 	Accounts.push_back(*SavingsPTR);
