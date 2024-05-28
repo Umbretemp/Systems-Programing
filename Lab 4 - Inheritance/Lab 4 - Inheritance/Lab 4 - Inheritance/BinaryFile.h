@@ -10,6 +10,7 @@ class BinaryFile
 {
 public:
 	static void binaryWrite(const std::vector<BaseAccount>& Account);
+	static void binaryRead();
 
 private:
 };
