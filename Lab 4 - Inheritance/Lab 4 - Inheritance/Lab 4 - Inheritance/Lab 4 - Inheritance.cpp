@@ -11,7 +11,7 @@ int main()
 {
 	// include memory leak detection ( needs to be at top of main )
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	_CrtSetBreakAlloc(160); // set block of memory to find memory leak
+	_CrtSetBreakAlloc(-1); // set block of memory to find memory leak
 	_CrtDumpMemoryLeaks();
 
 	std::vector<float> Accounts;
@@ -28,7 +28,8 @@ int main()
 		SavingsPTR->Deposit(Accounts[1]);
 		CreditPTR->Deposit(Accounts[2]);
 		Accounts.clear();
-		checkfile.close();
+		if(checkfile.is_open())
+			checkfile.close();
 	}
 	else
 	{
@@ -178,8 +179,7 @@ int main()
 		Accounts.push_back(CreditPTR->GetBalance());
 	}
 	BinaryFile::binaryWrite(Accounts);
-
-	
+		
 	delete CheckingPTR;
 	delete SavingsPTR;
 	delete CreditPTR;
