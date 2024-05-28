@@ -25,9 +25,9 @@ int main()
 	{
 		BinaryFile::binaryRead(Accounts);
 		CheckingPTR->Deposit(Accounts[0]);
+		// Unhandled exception at 0x00007FFFB943C769 (ntdll.dll) in Lab 4 - Inheritance.exe: 0xC0000374: A heap has been corrupted (parameters: 0x00007FFFB94B38B0). ???
 		SavingsPTR->Deposit(Accounts[1]);
 		CreditPTR->Deposit(Accounts[2]);
-		Accounts.clear();
 		if(checkfile.is_open())
 			checkfile.close();
 	}
@@ -172,12 +172,11 @@ int main()
 
 	} while (menuSelection != bankMenu.size());
 
-	if (Accounts.size() == 0)
-	{
-		Accounts.push_back(CheckingPTR->GetBalance());
-		Accounts.push_back(SavingsPTR->GetBalance());
-		Accounts.push_back(CreditPTR->GetBalance());
-	}
+	
+	Accounts[0] = (CheckingPTR->GetBalance());
+	Accounts[1] = (SavingsPTR->GetBalance());
+	Accounts[2] = (CreditPTR->GetBalance());
+	
 	BinaryFile::binaryWrite(Accounts);
 		
 	delete CheckingPTR;
