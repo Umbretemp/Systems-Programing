@@ -11,18 +11,30 @@ int main()
 {
 	// include memory leak detection ( needs to be at top of main )
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-	_CrtSetBreakAlloc(-1); // set block of memory to find memory leak
+	_CrtSetBreakAlloc(160); // set block of memory to find memory leak
 	_CrtDumpMemoryLeaks();
 
-	std::vector<BaseAccount> Accounts;
+	std::vector<float> Accounts;
 
+	CheckingAccount* CheckingPTR = new CheckingAccount();
+	SavingsAccount* SavingsPTR = new SavingsAccount();
+	CreditAccount* CreditPTR = new CreditAccount();
 
-	BaseAccount* BasePTR = new BaseAccount();
-	CheckingAccount* CheckingPTR = new CheckingAccount(5000);
-	SavingsAccount* SavingsPTR = new SavingsAccount(2000);
-	CreditAccount* CreditPTR = new CreditAccount(50000);
-
-	BinaryFile::binaryRead(Accounts);
+	std::fstream checkfile("Balance.bin");
+	if (checkfile.good())
+	{
+		BinaryFile::binaryRead(Accounts);
+		CheckingPTR->Deposit(Accounts[0]);
+		SavingsPTR->Deposit(Accounts[1]);
+		CreditPTR->Deposit(Accounts[2]);
+		checkfile.close();
+	}
+	else
+	{
+		CheckingPTR->Deposit(5000);
+		SavingsPTR->Deposit(2000);
+		CreditPTR->Deposit(50000);
+	}
 
 	int menuSelection = 0;
 	std::vector<std::string> bankMenu{ "1. Checking Account", "2. Savings Account", "3. Credit Account", "4. Exit" };
@@ -158,14 +170,15 @@ int main()
 
 	} while (menuSelection != bankMenu.size());
 
-	Accounts.push_back(*BasePTR);
-	Accounts.push_back(*CheckingPTR);
-	Accounts.push_back(*SavingsPTR);
-	Accounts.push_back(*CreditPTR);
-
+	if (Accounts.size() == 0)
+	{
+		Accounts.push_back(CheckingPTR->GetBalance());
+		Accounts.push_back(SavingsPTR->GetBalance());
+		Accounts.push_back(CreditPTR->GetBalance());
+	}
 	BinaryFile::binaryWrite(Accounts);
 
-	delete BasePTR;
+	
 	delete CheckingPTR;
 	delete SavingsPTR;
 	delete CreditPTR;

@@ -9,8 +9,8 @@
 class BinaryFile
 {
 public:
-	static void binaryWrite(const std::vector<BaseAccount>& Account);
-	static void binaryRead(std::vector<BaseAccount>& Account);
+	static void binaryWrite(const std::vector<float>& Account);
+	static void binaryRead(std::vector<float>& Account);
 
 private:
 };

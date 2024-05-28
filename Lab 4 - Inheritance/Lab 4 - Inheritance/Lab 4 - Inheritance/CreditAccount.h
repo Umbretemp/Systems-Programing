@@ -3,7 +3,7 @@
 class CreditAccount : public BaseAccount
 {
 public:
-	CreditAccount(float accountBalance_, int withdrawals_ = 0, int ammountSpent = 0)
+	CreditAccount(float accountBalance_ = 0, int withdrawals_ = 0, int ammountSpent = 0)
 		: BaseAccount(accountBalance_, withdrawals_)
 		,ammountSpent_(ammountSpent)
 	{
