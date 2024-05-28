@@ -9,16 +9,8 @@
 class BinaryFile
 {
 public:
-<<<<<<< HEAD
 	static void binaryWrite(const std::vector<float>& Account);
 	static void binaryRead(std::vector<float>& Account);
-=======
-	static void binaryWrite(const std::vector<BaseAccount>& Account);
-<<<<<<< HEAD
-	static void binaryRead();
->>>>>>> Binary Read (before changing constructor)
-=======
->>>>>>> trash
 
 private:
 };
