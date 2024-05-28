@@ -183,4 +183,5 @@ int main()
 	delete CheckingPTR;
 	delete SavingsPTR;
 	delete CreditPTR;
+	// Recieving nullptr error???
 }
