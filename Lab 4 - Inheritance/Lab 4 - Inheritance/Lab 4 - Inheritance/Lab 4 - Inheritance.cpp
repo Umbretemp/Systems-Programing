@@ -27,6 +27,7 @@ int main()
 		CheckingPTR->Deposit(Accounts[0]);
 		SavingsPTR->Deposit(Accounts[1]);
 		CreditPTR->Deposit(Accounts[2]);
+		Accounts.clear();
 		checkfile.close();
 	}
 	else
