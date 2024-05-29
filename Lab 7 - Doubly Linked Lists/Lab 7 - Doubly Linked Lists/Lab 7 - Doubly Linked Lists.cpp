@@ -8,5 +8,13 @@ int main()
 	_CrtDumpMemoryLeaks();
 	
 	DList<int> testing;
+	
+	testing.push_back(89);
+	testing.push_back(75);
+
+	testing.push_back(1);
+	testing.Erase(2);
+
+	testing.Print();
 
 }

@@ -31,7 +31,9 @@ public:
 	const Type& operator[](int _index) const;
 
 	void Clear();
-
+	void push_front(Type _data);
+	void Erase(int _index);
+	void Print();
 };
 
 
@@ -94,4 +96,80 @@ void DList<Type>::Clear()
 
 	first = last = nullptr;
 	count = 0;
+}
+
+template<typename Type>
+void DList<Type>::push_front(Type _data)
+{
+	node* n = new node(_data, first);
+
+	if (first)
+		first->prev = n;
+	else
+		last = n;
+
+	first = n;
+
+	++count;
+}
+
+template<typename Type>
+void DList<Type>::Erase(int _index)
+{
+	if (_index < 0 || _index >= count)
+		return;
+
+	node* temp = first;
+
+	for (int i = 0; i < _index; ++i)
+		temp = temp->next;
+
+	if (temp == first)
+	{
+		first = temp->next;
+		if (first)
+			first->prev = nullptr;
+	}
+	else if (temp == last)
+	{
+		last = temp->prev;
+		if (last)
+			last->next = nullptr;
+	}
+	else
+	{
+		temp->prev->next = temp->next;
+		temp->next->prev = temp->prev;
+	}
+
+	delete temp;
+
+	--count;
+}
+
+template<typename Type>
+void DList<Type>::Print()
+{
+	node* temp = first;
+
+	std::cout << "Forward: ";
+	
+	while (temp)
+	{
+		std::cout << temp->data << " ";
+		temp = temp->next;
+	}
+
+	std::cout << std::endl;
+
+	temp = last;
+
+	std::cout << "Backward: ";
+	while (temp)
+	{
+		std::cout << temp->data << " ";
+		temp = temp->prev;
+	}
+
+	std::cout << std::endl;
 }
