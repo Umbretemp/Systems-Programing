@@ -4,6 +4,7 @@
 #include "Employee.h"
 #include "Student.h"
 #include "Helper.h"
+#define MEMORY_LEAK_LINE -1
 
 void AddRecord(std::vector<Base*>& vect);
 void DisplayRecords(std::vector<Base*>& vect);
@@ -11,6 +12,10 @@ void DuplicateRecord(std::vector<Base*>& vect);
 
 int main()
 {
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	_CrtSetBreakAlloc(MEMORY_LEAK_LINE); // DO NOT COMMENT OUT THIS LINE
+	_CrtDumpMemoryLeaks();
+
 	std::vector<Base*> Bases;
 	int choice = 0;
 
