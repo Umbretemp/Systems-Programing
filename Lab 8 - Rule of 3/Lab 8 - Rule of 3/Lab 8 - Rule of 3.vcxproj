@@ -135,6 +135,7 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Employee.h" />
+    <ClInclude Include="Helper.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
