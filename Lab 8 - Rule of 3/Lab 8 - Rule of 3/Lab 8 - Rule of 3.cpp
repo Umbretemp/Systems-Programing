@@ -100,6 +100,7 @@ void DisplayRecords(std::vector<Base*>& vect)
 	}
 }
 
+//TODO fix
 void DuplicateRecord(std::vector<Base*>& vect)
 {
 	int index = -1;
