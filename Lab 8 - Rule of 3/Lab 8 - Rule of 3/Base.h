@@ -5,7 +5,13 @@ private:
 	char* _name = nullptr;
 
 public:
-	void SetName(const char* name);
+	// method
+	
 
+	// getter
+	char* getName() { return _name; }
+
+	// setter
+	void SetName(const char* name);
 };
 
