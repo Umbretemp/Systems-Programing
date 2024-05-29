@@ -8,7 +8,7 @@ private:
 
 public:
 	// method
-	virtual void DisplayRecord() override;
+	void DisplayRecord() override;
 
 	// getter
 
