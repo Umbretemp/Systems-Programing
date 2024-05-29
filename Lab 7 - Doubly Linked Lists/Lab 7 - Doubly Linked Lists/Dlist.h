@@ -30,6 +30,8 @@ public:
 	Type& operator[](int _index);
 	const Type& operator[](int _index) const;
 
+	void Clear();
+
 };
 
 
@@ -52,7 +54,7 @@ void DList<Type>::push_back(Type _data)
 template<typename Type>
 DList<Type>::~DList()
 {
-	//You will need to fill this out
+	Clear();
 }
 
 template<typename Type>
@@ -77,4 +79,19 @@ const Type& DList<Type>::operator[](int _index) const
 		temp = temp->next;
 
 	return temp->data;
+}
+
+template<typename Type>
+void DList<Type>::Clear()
+{
+	node* temp = first;
+	while (temp)
+	{
+		node* next = temp->next;
+		delete temp;
+		temp = next;
+	}
+
+	first = last = nullptr;
+	count = 0;
 }
