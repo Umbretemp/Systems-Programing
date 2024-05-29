@@ -57,6 +57,9 @@ template<typename Type>
 DList<Type>::~DList()
 {
 	Clear();
+	// "except for resetting the first, last, and size." Why not keep in clear??
+	first = last = nullptr;
+	count = 0;
 }
 
 template<typename Type>
@@ -92,24 +95,22 @@ void DList<Type>::Clear()
 		node* next = temp->next;
 		delete temp;
 		temp = next;
-	}
-
-	first = last = nullptr;
-	count = 0;
+	}	
 }
 
 template<typename Type>
 void DList<Type>::push_front(Type _data)
 {
-	node* n = new node(_data, first);
-
+	node* n = new node(_data, nullptr);
+	node* temp = first;
 	if (first)
 		first->prev = n;
 	else
 		last = n;
 
 	first = n;
-
+	n->next = temp;
+	
 	++count;
 }
 

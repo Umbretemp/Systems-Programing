@@ -15,6 +15,8 @@ int main()
 	testing.push_back(1);
 	testing.Erase(2);
 
-	testing.Print();
+	testing.push_front(2);
 
+	testing.Print();
+	// I'm completely unsure about how to check for edge cases on this one
 }
