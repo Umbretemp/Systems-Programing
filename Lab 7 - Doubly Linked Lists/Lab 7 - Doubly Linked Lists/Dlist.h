@@ -102,14 +102,14 @@ template<typename Type>
 void DList<Type>::push_front(Type _data)
 {
 	node* n = new node(_data, nullptr);
-	node* temp = first;
-	if (first)
+	n->next = first;
+
+	if (first != nullptr)
 		first->prev = n;
 	else
 		last = n;
 
 	first = n;
-	n->next = temp;
 	
 	++count;
 }

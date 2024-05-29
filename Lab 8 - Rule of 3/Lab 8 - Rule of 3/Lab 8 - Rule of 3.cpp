@@ -96,4 +96,19 @@ void DisplayRecords(std::vector<Base*>& vect)
 
 void DuplicateRecord(std::vector<Base*>& vect)
 {
+	int index = -1;
+	bool valid = false;
+	do
+	{
+		std::cout << "Enter the index of the record you would like to duplicate: ";
+		std::cin >> index;
+
+		if (index < 0 || index >= vect.size())
+		{
+			std::cout << "Invalid index.\n";
+			valid = true;
+		}
+	} while (valid);
+	
+	vect.push_back(vect[index]);
 }

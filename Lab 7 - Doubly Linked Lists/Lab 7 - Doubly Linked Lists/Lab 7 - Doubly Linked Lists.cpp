@@ -9,14 +9,16 @@ int main()
 	
 	DList<int> testing;
 	
-	testing.push_back(89);
-	testing.push_back(75);
+	testing.push_back(89); 
+	testing.push_back(75); 
 
-	testing.push_back(1);
+	testing.push_back(1); 
+	testing.Print();
+	testing.Erase(0);
+
+	testing.push_front(5);
+	testing.push_front(2); 
 	testing.Erase(2);
-
-	testing.push_front(2);
-
 	testing.Print();
 	// I'm completely unsure about how to check for edge cases on this one
 }
