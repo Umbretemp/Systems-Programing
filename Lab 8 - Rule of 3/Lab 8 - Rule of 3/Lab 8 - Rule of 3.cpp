@@ -88,10 +88,10 @@ void AddRecord(std::vector<Base*>& vect)
 
 void DisplayRecords(std::vector<Base*>& vect)
 {
-	/*for (auto i = 0; i < vect.size(); i++)
+	for (auto i = 0; i < vect.size(); i++)
 	{
 		vect[i]->DisplayRecord();
-	}*/
+	}
 }
 
 void DuplicateRecord(std::vector<Base*>& vect)
