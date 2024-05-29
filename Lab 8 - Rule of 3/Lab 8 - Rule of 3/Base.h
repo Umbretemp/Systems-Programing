@@ -14,7 +14,6 @@ public:
 	Base(const Base& other); // copy constructor
 	virtual ~Base(); // destructor - gets called when object gets destroyed
 
-
 	// getter
 	char* getName() { return _name; }
 
