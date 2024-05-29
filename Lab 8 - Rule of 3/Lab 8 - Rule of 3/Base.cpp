@@ -1,7 +1,32 @@
 #include "Base.h"
 #include <iostream>
 
-void Base::SetName(const char* name)
+Base::Base() // default ctor
+{
+	setName("default");
+}
+
+Base& Base::operator=(const Base& other)
+{
+	if (this != &other) // if they have the same memory address - smae object don't need to do anything
+	{
+		setName(other._name); // does a deep copy for us		
+	}
+
+	return *this; // this is a pointer to the invoking object
+}
+
+Base::Base(const Base& other)
+{
+	*this = other;
+}
+
+Base::~Base()
+{	
+	delete[] _name;
+}
+
+void Base::setName(const char* name)
 {
 	if (_name != nullptr)
 	{
