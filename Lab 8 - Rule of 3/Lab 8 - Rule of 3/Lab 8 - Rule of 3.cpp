@@ -3,6 +3,7 @@
 #include "Base.h"
 #include "Employee.h"
 #include "Student.h"
+#include "Helper.h"
 
 void AddRecord(std::vector<Base*>& vect);
 void DisplayRecords(std::vector<Base*>& vect);
@@ -108,7 +109,7 @@ void DuplicateRecord(std::vector<Base*>& vect)
 			std::cout << "Invalid index.\n";
 			valid = true;
 		}
-	} while (valid);
+	} while (true);
 	
 	vect.push_back(vect[index]);
 }
