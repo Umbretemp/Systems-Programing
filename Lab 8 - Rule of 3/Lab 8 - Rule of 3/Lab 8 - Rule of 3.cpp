@@ -10,6 +10,16 @@ void AddRecord(std::vector<Base*>& vect);
 void DisplayRecords(std::vector<Base*>& vect);
 void DuplicateRecord(std::vector<Base*>& vect);
 
+void changeIt(Employee ptr)
+{
+
+}
+
+void changeIt2(Student ptr)
+{
+
+}
+
 int main()
 {
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
@@ -25,9 +35,10 @@ int main()
 		std::cout << "2. Display records\n";
 		std::cout << "3. Duplicate record\n";
 		std::cout << "4. Exit\n";
-		std::cout << "Enter your choice: ";
-		std::cin >> choice;
-
+		//std::cout << "Enter your choice: ";
+		//std::cin >> choice;
+		choice = Helper::GetValidatedInt("Enter your choice: ", 1, 4);
+		
 		switch (choice) {
 		case 1:
 			AddRecord(Bases);
@@ -63,14 +74,13 @@ void AddRecord(std::vector<Base*>& vect)
 			int Salary = 0;
 			std::cout << "What is the Employee's Name?\n";
 			std::cin >> name;
-			char* nptr = name;
-			newEmployee->setName(nptr);
-			Salary = Helper::GetValidatedInt("What is the Employee's Salary?\n", 0, INT_MAX);
+			char* nameptr = name;
+			newEmployee->setName(nameptr);
+			Salary = Helper::GetValidatedInt("What is the Employee's Salary?", 0, INT_MAX);
 			newEmployee->setSalary(Salary);
 			std::cout << "New Employee added\t";
 			newEmployee->DisplayRecord();
 			vect.push_back(newEmployee);
-			delete newEmployee;
 		}
 		else if (choice == 2)
 		{
@@ -79,14 +89,13 @@ void AddRecord(std::vector<Base*>& vect)
 			float GPA = 0.00;
 			std::cout << "What is the Student's Name?\n";
 			std::cin >> name;
-			char* nptr = name;
-			newStudent->setName(nptr);
-			GPA = Helper::GetValidatedInt("What is the Student's GPA?\n", 0, 5.00);
+			char* nameptr = name;
+			newStudent->setName(nameptr);
+			GPA = Helper::GetValidatedInt("What is the Student's GPA?", 0, 5.00);
 			newStudent->setGPA(GPA);
 			std::cout << "New Student added\t";
 			newStudent->DisplayRecord();
-			vect.push_back(newStudent);
-			delete newStudent;
+			vect.push_back(newStudent);			
 		}
 		else
 			std::cout << "Invalid choice. Please choose 1. Employee or 2. Student\n";
@@ -100,7 +109,6 @@ void DisplayRecords(std::vector<Base*>& vect)
 	}
 }
 
-//TODO fix
 void DuplicateRecord(std::vector<Base*>& vect)
 {
 	int index = -1;
@@ -118,6 +126,18 @@ void DuplicateRecord(std::vector<Base*>& vect)
 	//	}
 	//} while (true);
 	
-	vect.push_back(dynamic_cast<Base*>(vect[index]));
-	
+	Employee* test = dynamic_cast<Employee*>(vect[index]);
+	Student* test1 = dynamic_cast<Student*>(vect[index]);
+	if (test != nullptr)
+	{
+		changeIt(*test);
+		vect.push_back(test);
+	}
+	else if (test1 != nullptr)
+	{
+		changeIt2(*test1);
+		vect.push_back(test1);
+	}
+	else
+		std::cout << "That recored is not an Employee or Student.\n";
 }
