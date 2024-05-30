@@ -65,8 +65,7 @@ void AddRecord(std::vector<Base*>& vect)
 			std::cin >> name;
 			char* nptr = name;
 			newEmployee->setName(nptr);
-			std::cout << "What is the Employee's Salary?\n";
-			std::cin >> Salary;
+			Salary = Helper::GetValidatedInt("What is the Employee's Salary?\n", 0, INT_MAX);
 			newEmployee->setSalary(Salary);
 			std::cout << "New Employee added\t";
 			newEmployee->DisplayRecord();
@@ -82,8 +81,7 @@ void AddRecord(std::vector<Base*>& vect)
 			std::cin >> name;
 			char* nptr = name;
 			newStudent->setName(nptr);
-			std::cout << "What is the Student's GPA?\n";
-			std::cin >> GPA;
+			GPA = Helper::GetValidatedInt("What is the Student's GPA?\n", 0, 5.00);
 			newStudent->setGPA(GPA);
 			std::cout << "New Student added\t";
 			newStudent->DisplayRecord();
@@ -120,5 +118,6 @@ void DuplicateRecord(std::vector<Base*>& vect)
 	//	}
 	//} while (true);
 	
-	vect.push_back(vect[index]);
+	vect.push_back(dynamic_cast<Base*>(vect[index]));
+	
 }
