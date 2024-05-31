@@ -8,6 +8,8 @@ private:
 
 public:
 	// method
+	Student();
+	~Student();
 	void DisplayRecord() override;
 
 	// getter

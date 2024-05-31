@@ -7,7 +7,8 @@ private:
 
 public:
 	// method
-	//Employee();
+	Employee();
+	~Employee();
 	void DisplayRecord() override;
 
 	// getter
