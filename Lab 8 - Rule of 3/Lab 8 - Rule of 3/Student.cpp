@@ -4,7 +4,7 @@
 Student::Student()
 {
 	setName("random");
-	setGPA(1.01);
+	setGPA((float)1.01);
 }
 
 Student::~Student()
