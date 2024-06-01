@@ -2,8 +2,8 @@
 class TriangleHeap
 {
 private:
-	float* mBase = (float*)nullptr;
-	float* mHeight = (float*)nullptr;
+	float* mBase = new float;
+	float* mHeight = new float;
 
 public:
 	TriangleHeap(); // default

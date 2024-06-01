@@ -1,6 +1,6 @@
 #include "TriangleHeap.h"
 
-TriangleHeap::TriangleHeap() : mBase(nullptr), mHeight(nullptr)
+TriangleHeap::TriangleHeap()
 {
     setBase(0.0f);
     setHeight(0.0f);

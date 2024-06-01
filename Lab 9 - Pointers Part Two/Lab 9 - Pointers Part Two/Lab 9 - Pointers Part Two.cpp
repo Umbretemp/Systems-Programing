@@ -9,6 +9,11 @@ void SwapValues(int* a, int* b);
 
 int main()
 {
+    // include memory leak detection ( needs to be at top of main )
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    _CrtSetBreakAlloc(-1); // set block of memory to find memory leak
+    _CrtDumpMemoryLeaks();
+
     TriangleStack Tri1;
     Tri1.setBase(3.6);
     Tri1.setHeight(7.1);
@@ -20,11 +25,22 @@ int main()
     triVect.push_back(Tri2);
     for (auto i = 0; i < triVect.size(); i++)
     {
-        std::cout << "TriangleStack#" << i << " " << triVect[i].GetArea() << "\n";
+        std::cout << "TriangleStack#" << i << "'s AREA: " << triVect[i].GetArea() << "\n";
     }
 
-
-
+    TriangleHeap TriHeap1;
+    TriHeap1.setBase(2.8);
+    TriHeap1.setHeight(13.4);
+    TriangleHeap TriHeap2;
+    TriHeap2.setBase(7.9);
+    TriHeap2.setHeight(16.5);
+    std::vector<TriangleHeap> HeapVect;
+    HeapVect.push_back(TriHeap1);
+    HeapVect.push_back(TriHeap2);
+    for (auto i = 0; i < HeapVect.size(); i++)
+    {
+        std::cout << "TriangleHeap#" << i << "'s AREA: " << HeapVect[i].GetArea() << "\n";
+    }
 }
 
 int AddNumbersReturnInt(int* a, int* b)
