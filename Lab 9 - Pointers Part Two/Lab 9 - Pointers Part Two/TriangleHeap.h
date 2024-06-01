@@ -10,5 +10,6 @@ public:
 	void setBase(float base) { *mBase = base; }
 	void setHeight(float height) { *mHeight = height; }
 
+	float GetArea();
 };
 

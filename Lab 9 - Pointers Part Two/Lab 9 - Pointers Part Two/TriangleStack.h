@@ -7,9 +7,9 @@ private:
 
 public:
 
-	void setBase(float base) { mBase = base; }
-	void setHeight(float height) { mHeight = height; }
+	void setBase(const float& base) { mBase = base; }
+	void setHeight(const float& height) { mHeight = height; }
 
-
+	float GetArea(); 
 };
 
